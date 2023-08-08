@@ -65,8 +65,8 @@ public class ManagerStudent {
         if (student != null){
             studentList.add(student);
             System.out.println("Thêm thành công");
-            write(studentList);
-            studentList = read();
+//            write(studentList);
+//            studentList = read();
         } else {
             System.out.println("Thông tin nhập không đúng");
         }
@@ -93,8 +93,8 @@ public class ManagerStudent {
                     studentList.get(checkId).setAvgPoint(student.getAvgPoint());
                     studentList.get(checkId).setGender(student.getGender());
                     System.out.println("Sửa thành công");
-                    write(studentList);
-                    studentList = read();
+//                    write(studentList);
+//                    studentList = read();
                 } else {
                     System.out.println("Thông tin nhập không đúng");
                 }
@@ -141,8 +141,7 @@ public class ManagerStudent {
 
     }
     public void max(){
-        Collections.sort(studentList , Student::compareTo);
-        //studentList.sort(Student::compareTo);
+        studentList.sort(Student::compareTo);
         if (studentList != null){
             System.out.println("Sinh viên có số điểm giảm dần");
             for (Student value: studentList) {
@@ -209,5 +208,10 @@ public class ManagerStudent {
     }
     public void readStudent(){
         studentList = read();
+        System.out.println("Đọc thành công");
+    }
+    public void writeStudent(){
+        write(studentList);
+        System.out.println("Ghi thành công");
     }
 }

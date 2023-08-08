@@ -37,9 +37,10 @@ public class MainStudent {
                         student.menu();
                         break;
                     case 6:
+                      student.readStudent();
                         break;
                     case 7:
-                        student.write(student.getStudentList());
+                        student.writeStudent();
                         break;
                     case 8:
                         check = false;
