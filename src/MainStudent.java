@@ -23,6 +23,7 @@ public class MainStudent {
                 switch (choice) {
                     case 1:
                         student.showStudent();
+                        break;
                     case 2:
                         student.addStudent(student.input());
                         break;
